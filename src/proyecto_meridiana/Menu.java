@@ -36,9 +36,9 @@ public class Menu extends javax.swing.JFrame {
         jList2 = new javax.swing.JList<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        pizzas_a = new javax.swing.JButton();
+        armar_pizza_a = new javax.swing.JButton();
+        carrito_a = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
@@ -85,52 +85,52 @@ public class Menu extends javax.swing.JFrame {
         jButton4.setBounds(370, 200, 65, 65);
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Mixta", "Hawaiana", "Mexicana", "Vegetariana", "Atún", "Camarones", "Especial", "Pizza 4 Ingredientes" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane2.setViewportView(jList2);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(290, 300, 170, 150);
+        jScrollPane2.setBounds(340, 310, 170, 150);
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_1.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_pizzas.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        pizzas_a.setBackground(new java.awt.Color(255, 255, 255));
+        pizzas_a.setForeground(new java.awt.Color(255, 255, 255));
+        pizzas_a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_pizzas.png"))); // NOI18N
+        pizzas_a.setBorder(null);
+        pizzas_a.setBorderPainted(false);
+        pizzas_a.setContentAreaFilled(false);
+        pizzas_a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                pizzas_aActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        armar_pizza_a.setBackground(new java.awt.Color(255, 255, 255));
+        armar_pizza_a.setForeground(new java.awt.Color(255, 255, 255));
+        armar_pizza_a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
+        armar_pizza_a.setBorder(null);
+        armar_pizza_a.setBorderPainted(false);
+        armar_pizza_a.setContentAreaFilled(false);
+        armar_pizza_a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                armar_pizza_aActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        carrito_a.setBackground(new java.awt.Color(255, 255, 255));
+        carrito_a.setForeground(new java.awt.Color(255, 255, 255));
+        carrito_a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
+        carrito_a.setBorder(null);
+        carrito_a.setBorderPainted(false);
+        carrito_a.setContentAreaFilled(false);
+        carrito_a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                carrito_aActionPerformed(evt);
             }
         });
 
@@ -142,11 +142,11 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 423, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrito_a, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pizzas_a, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(armar_pizza_a, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
@@ -154,9 +154,9 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
+                    .addComponent(carrito_a)
+                    .addComponent(armar_pizza_a)
+                    .addComponent(pizzas_a)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel3)))
@@ -183,24 +183,24 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void pizzas_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzas_aActionPerformed
      pizzas ventana_2 = new pizzas();
      ventana_2.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_pizzas_aActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void armar_pizza_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_armar_pizza_aActionPerformed
      armar_pizza ventana_3 = new armar_pizza();
      ventana_3.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_armar_pizza_aActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void carrito_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrito_aActionPerformed
  
      Menu ventana_1 = new Menu();
      ventana_1.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_carrito_aActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
@@ -246,9 +246,8 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton armar_pizza_a;
+    private javax.swing.JButton carrito_a;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -258,5 +257,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton pizzas_a;
     // End of variables declaration//GEN-END:variables
 }

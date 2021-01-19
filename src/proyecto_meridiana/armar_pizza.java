@@ -29,9 +29,9 @@ public class armar_pizza extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        pizzas_c = new javax.swing.JButton();
+        armar_pizzas_c = new javax.swing.JButton();
+        carrito_c = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,39 +42,39 @@ public class armar_pizza extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_1.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_pizzas.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        pizzas_c.setBackground(new java.awt.Color(255, 255, 255));
+        pizzas_c.setForeground(new java.awt.Color(255, 255, 255));
+        pizzas_c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_pizzas.png"))); // NOI18N
+        pizzas_c.setBorder(null);
+        pizzas_c.setBorderPainted(false);
+        pizzas_c.setContentAreaFilled(false);
+        pizzas_c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                pizzas_cActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        armar_pizzas_c.setBackground(new java.awt.Color(255, 255, 255));
+        armar_pizzas_c.setForeground(new java.awt.Color(255, 255, 255));
+        armar_pizzas_c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
+        armar_pizzas_c.setBorder(null);
+        armar_pizzas_c.setBorderPainted(false);
+        armar_pizzas_c.setContentAreaFilled(false);
+        armar_pizzas_c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                armar_pizzas_cActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        carrito_c.setBackground(new java.awt.Color(255, 255, 255));
+        carrito_c.setForeground(new java.awt.Color(255, 255, 255));
+        carrito_c.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
+        carrito_c.setBorder(null);
+        carrito_c.setBorderPainted(false);
+        carrito_c.setContentAreaFilled(false);
+        carrito_c.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                carrito_cActionPerformed(evt);
             }
         });
 
@@ -86,11 +86,11 @@ public class armar_pizza extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 423, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(carrito_c, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pizzas_c, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(armar_pizzas_c, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,9 +98,9 @@ public class armar_pizza extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
+                    .addComponent(carrito_c)
+                    .addComponent(armar_pizzas_c)
+                    .addComponent(pizzas_c)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel3)))
@@ -118,23 +118,23 @@ public class armar_pizza extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void pizzas_cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzas_cActionPerformed
      pizzas ventana_2 = new pizzas();
      ventana_2.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_pizzas_cActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void armar_pizzas_cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_armar_pizzas_cActionPerformed
      armar_pizza ventana_3 = new armar_pizza();
      ventana_3.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_armar_pizzas_cActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void carrito_cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrito_cActionPerformed
      Menu ventana_1 = new Menu();
      ventana_1.setVisible(true);  
      dispose();  
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_carrito_cActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,11 +173,11 @@ public class armar_pizza extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton armar_pizzas_c;
+    private javax.swing.JButton carrito_c;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton pizzas_c;
     // End of variables declaration//GEN-END:variables
 }
