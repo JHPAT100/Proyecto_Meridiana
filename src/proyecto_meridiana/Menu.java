@@ -21,17 +21,14 @@ public class Menu extends javax.swing.JFrame {
      */
     public static int suma = 0;
   
+    //Clase o metodo que me permite recibir valores de otros Jframe y sumar los valores para el total
     public static void total_suma(int valor, int tipo){
         
+        //Suma del total
       suma = suma + valor;
       
-         String s = Integer.toString(suma);
-        
      }
-    public void resta(){
-        String texto="MEDIANA";
-        texto.indexOf(texto);
-    }
+    
     
     
     public Menu() {
@@ -279,9 +276,11 @@ public class Menu extends javax.swing.JFrame {
         // elimino seleccion de la lista
         int eliminar = lista_pedido.getSelectedIndex();
        
-
+//obtengo la seleccion de elemento de la lista
         String texto=lista_pedido.getSelectedValue();
           
+        
+        //comparo palabras exactas para ello busco las key con indexOf para luego hacer descuento de los precios del producto a eliminar
         if ( texto.indexOf("MEDIANA") != -1 && texto.indexOf("CAMARONES" ) != -1 ){
             suma = suma - 200;
         }else  if ( texto.indexOf("GRANDE") != -1 && texto.indexOf("CAMARONES" ) != -1 ){
@@ -291,8 +290,12 @@ public class Menu extends javax.swing.JFrame {
         }else  if ( texto.indexOf("GRANDE") != -1 ){
             suma = suma - 210;
         }
+        
+        //Muestro el precio nuevo
         String s = Integer.toString(suma);
         total_txt.setText("$ "+ s);
+        
+        //Elimino la seleccion 
          lista_p.remove(eliminar);
     }//GEN-LAST:event_eleminar_seleccion_bActionPerformed
 
@@ -312,12 +315,15 @@ public class Menu extends javax.swing.JFrame {
          int eliminar_todo = lista_pedido.getSelectedIndex();
         lista_p.removeAllElements();
          suma = 0;
+         
+         //Igualo el precio del total a cero
         String s = Integer.toString(suma);
         total_txt.setText("$" + s);
     }//GEN-LAST:event_Eliminar_pedido_bActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-      String s = Integer.toString(suma);
+//Muestro el total del pedido
+        String s = Integer.toString(suma);
         total_txt.setText("$" + s);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
