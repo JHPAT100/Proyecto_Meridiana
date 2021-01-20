@@ -13,13 +13,14 @@ import static proyecto_meridiana.Menu.lista_p;
  */
 public class pizzas extends javax.swing.JFrame {
 
+    //Creo variables globales que permiten manejarse en todo el codigo
    public static int control = 0;
    public static int control2 = 0;
     /**
      * Creates new form pizzas
      */
    
-   
+   //Metodo     que permite mostar los precios de las pizzas antes de realizar el pedido
    public void Precio_txt(){
        if (control2 == 0 ){
             Precio.setText("GRANDE = 210  MEDIANA = 150");
@@ -592,12 +593,14 @@ public class pizzas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pizzas_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzas_bActionPerformed
-     pizzas ventana_2 = new pizzas();
+     //Recarga la pagina 
+        pizzas ventana_2 = new pizzas();
      ventana_2.setVisible(true);  
      dispose();  
     }//GEN-LAST:event_pizzas_bActionPerformed
 
     private void MEXICANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MEXICANAMouseClicked
+        // Muestro el tipo de pizza
         Pizza_txt.setText("");
        Pizza_txt.setText("MEXICANA");
        Precio_txt();
@@ -605,19 +608,21 @@ public class pizzas extends javax.swing.JFrame {
     }//GEN-LAST:event_MEXICANAMouseClicked
 
     private void HAWAIANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HAWAIANAMouseClicked
-      Pizza_txt.setText("");
+     // Muestro el tipo de pizza
+        Pizza_txt.setText("");
        Pizza_txt.setText("HAWAIANA");
        Precio_txt();
     }//GEN-LAST:event_HAWAIANAMouseClicked
 
     private void agregar_pizzas_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_pizzas_bActionPerformed
-        // Obtengo texto de la caja de texto
+        //Comparo la seleccion del menu despelgable y lo comparo para mandar el precio del producto al Jframe Menu en su metodo total_suma
         
         if (control == 0 && tamaño_pizza_b1.getSelectedItem() == "MEDIANA"){
             Menu.total_suma(150, 1);
         }else if (control == 0 && tamaño_pizza_b1.getSelectedItem() == "GRANDE"){
            Menu.total_suma(210,2);
         }else if (control !=0 && tamaño_pizza_b1.getSelectedItem() == "MEDIANA"){
+            //control es una variable que me permite tener los precios mas altos o diferentes
             control=0;
             Menu.total_suma(200,3);
         }else if (control !=0 && tamaño_pizza_b1.getSelectedItem() == "GRANDE"){
@@ -625,6 +630,7 @@ public class pizzas extends javax.swing.JFrame {
             Menu.total_suma(280,4);
         }
      String pizza =  Pizza_txt.getText();
+     //Envio a la lista de Menu el pedido del producto 
      pizza= "PIZZA "+pizza +" "+ tamaño_pizza_b1.getSelectedItem();
         Menu.lista_p.addElement(pizza);
 
@@ -636,28 +642,28 @@ public class pizzas extends javax.swing.JFrame {
     }//GEN-LAST:event_MEXICANAFocusGained
 
     private void MIXTAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MIXTAMouseClicked
-        // TODO add your handling code here:
+        // Muestro el tipo de pizza
         Pizza_txt.setText("");
         Pizza_txt.setText("MIXTA");
         Precio_txt();
     }//GEN-LAST:event_MIXTAMouseClicked
 
     private void ATUNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ATUNMouseClicked
-        // TODO add your handling code here:
+        // Muestro el tipo de pizza
         Pizza_txt.setText("");
         Pizza_txt.setText("ATUN");
         Precio_txt();
     }//GEN-LAST:event_ATUNMouseClicked
 
     private void ESPECIALMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ESPECIALMouseClicked
-        // TODO add your handling code here:
+       // Muestro el tipo de pizza
         Pizza_txt.setText("");
        Pizza_txt.setText("ESPECIAL");
        Precio_txt();
     }//GEN-LAST:event_ESPECIALMouseClicked
 
     private void CAMARONESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CAMARONESMouseClicked
-        // TODO add your handling code here:
+       // Muestro el tipo de pizza
         control = 1;
         control2=1;
         
@@ -667,7 +673,7 @@ public class pizzas extends javax.swing.JFrame {
     }//GEN-LAST:event_CAMARONESMouseClicked
 
     private void VEGETARIANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VEGETARIANAMouseClicked
-        // TODO add your handling code here:
+       // Muestro el tipo de pizza
         Pizza_txt.setText("");
         Pizza_txt.setText("VEGETARIANA");
         Precio_txt();
