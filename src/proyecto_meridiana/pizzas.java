@@ -5,16 +5,35 @@
  */
 package proyecto_meridiana;
 
+import static proyecto_meridiana.Menu.lista_p;
+
 /**
  *
  * @author JHPAT<sanhool@live.com.mx>
  */
 public class pizzas extends javax.swing.JFrame {
 
+   public static int control = 0;
+   public static int control2 = 0;
     /**
      * Creates new form pizzas
      */
+   
+   
+   public void Precio_txt(){
+       if (control2 == 0 ){
+            Precio.setText("GRANDE = 210  MEDIANA = 150");
+            
+        
+        }else if (control2 !=0 ){
+            Precio.setText("GRANDE = 280 MEDIANA = 200");
+            
+            control2=0;
+            
+        }
+   }
     public pizzas() {
+        
         initComponents();
     }
 
@@ -31,13 +50,11 @@ public class pizzas extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         pizzas_b = new javax.swing.JButton();
-        armar_pizza_b = new javax.swing.JButton();
-        carrito_b = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         MIXTA = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        agregar_pizzas_b = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         MEXICANA = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
@@ -62,9 +79,17 @@ public class pizzas extends javax.swing.JFrame {
         CAMARONES = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        tamaño_pizza_b1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        Precio = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Pizza_txt = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         jButton4.setText("jButton4");
@@ -90,30 +115,6 @@ public class pizzas extends javax.swing.JFrame {
             }
         });
 
-        armar_pizza_b.setBackground(new java.awt.Color(255, 255, 255));
-        armar_pizza_b.setForeground(new java.awt.Color(255, 255, 255));
-        armar_pizza_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
-        armar_pizza_b.setBorder(null);
-        armar_pizza_b.setBorderPainted(false);
-        armar_pizza_b.setContentAreaFilled(false);
-        armar_pizza_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                armar_pizza_bActionPerformed(evt);
-            }
-        });
-
-        carrito_b.setBackground(new java.awt.Color(255, 255, 255));
-        carrito_b.setForeground(new java.awt.Color(255, 255, 255));
-        carrito_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
-        carrito_b.setBorder(null);
-        carrito_b.setBorderPainted(false);
-        carrito_b.setContentAreaFilled(false);
-        carrito_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carrito_bActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -121,32 +122,32 @@ public class pizzas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 423, Short.MAX_VALUE)
-                .addComponent(carrito_b, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 601, Short.MAX_VALUE)
                 .addComponent(pizzas_b, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(armar_pizza_b, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(31, 31, 31))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(carrito_b)
-                    .addComponent(armar_pizza_b)
-                    .addComponent(pizzas_b)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(pizzas_b)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 800, 80);
 
         MIXTA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mixta.jpg"))); // NOI18N
+        MIXTA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MIXTAMouseClicked(evt);
+            }
+        });
 
         jPanel8.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -185,17 +186,22 @@ public class pizzas extends javax.swing.JFrame {
         getContentPane().add(jPanel7);
         jPanel7.setBounds(360, 120, 100, 100);
 
-        jButton6.setBackground(new java.awt.Color(102, 153, 255));
-        jButton6.setText("AGREGAR");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        agregar_pizzas_b.setBackground(new java.awt.Color(102, 153, 255));
+        agregar_pizzas_b.setText("AGREGAR");
+        agregar_pizzas_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                agregar_pizzas_bActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(610, 420, 90, 32);
+        getContentPane().add(agregar_pizzas_b);
+        agregar_pizzas_b.setBounds(610, 460, 90, 32);
 
         MEXICANA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mexicana.jpg"))); // NOI18N
+        MEXICANA.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                MEXICANAFocusGained(evt);
+            }
+        });
         MEXICANA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MEXICANAMouseClicked(evt);
@@ -240,6 +246,11 @@ public class pizzas extends javax.swing.JFrame {
         jPanel11.setBounds(500, 120, 100, 100);
 
         ATUN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atun.jpg"))); // NOI18N
+        ATUN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ATUNMouseClicked(evt);
+            }
+        });
 
         jPanel14.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -279,6 +290,11 @@ public class pizzas extends javax.swing.JFrame {
         jPanel13.setBounds(640, 120, 100, 100);
 
         VEGETARIANA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/vegetariana.jpg"))); // NOI18N
+        VEGETARIANA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VEGETARIANAMouseClicked(evt);
+            }
+        });
 
         jPanel16.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -318,6 +334,11 @@ public class pizzas extends javax.swing.JFrame {
         jPanel15.setBounds(640, 260, 100, 100);
 
         ESPECIAL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/especial.jpg"))); // NOI18N
+        ESPECIAL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ESPECIALMouseClicked(evt);
+            }
+        });
 
         jPanel18.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -401,6 +422,11 @@ public class pizzas extends javax.swing.JFrame {
         jPanel19.setBounds(210, 120, 100, 100);
 
         CAMARONES.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/camarones.jpg"))); // NOI18N
+        CAMARONES.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CAMARONESMouseClicked(evt);
+            }
+        });
 
         jPanel22.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -439,37 +465,122 @@ public class pizzas extends javax.swing.JFrame {
         getContentPane().add(jPanel21);
         jPanel21.setBounds(500, 260, 100, 100);
 
+        jPanel3.setBackground(new java.awt.Color(255, 51, 51));
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Tamaño:");
+
+        tamaño_pizza_b1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEDIANA", "GRANDE" }));
+        tamaño_pizza_b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tamaño_pizza_b1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(tamaño_pizza_b1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tamaño_pizza_b1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(360, 380, 200, 50);
+
         jPanel2.setBackground(new java.awt.Color(255, 51, 51));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Tamaño:");
+        jPanel4.setBackground(new java.awt.Color(0, 102, 153));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHICA", "MEDIANA", "GRANDE" }));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Precio");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1)
+        );
+
+        Precio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Precio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Precio, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(390, 410, 200, 50);
+        jPanel2.setBounds(580, 380, 190, 50);
+
+        jPanel5.setBackground(new java.awt.Color(255, 51, 51));
+
+        jPanel6.setBackground(new java.awt.Color(0, 102, 153));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Pizza Seleccionada");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+        );
+
+        Pizza_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Pizza_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pizza_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel5);
+        jPanel5.setBounds(360, 440, 200, 70);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Primer_Fondo_Menu.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -477,6 +588,7 @@ public class pizzas extends javax.swing.JFrame {
         jLabel2.setBounds(0, -410, 1180, 980);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void pizzas_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzas_bActionPerformed
@@ -485,31 +597,86 @@ public class pizzas extends javax.swing.JFrame {
      dispose();  
     }//GEN-LAST:event_pizzas_bActionPerformed
 
-    private void armar_pizza_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_armar_pizza_bActionPerformed
-     armar_pizza ventana_3 = new armar_pizza();
-     ventana_3.setVisible(true);  
-     dispose();  
-    }//GEN-LAST:event_armar_pizza_bActionPerformed
-
-    private void carrito_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrito_bActionPerformed
-      Menu ventana_1 = new Menu();
-     ventana_1.setVisible(true);  
-     dispose();  
-    }//GEN-LAST:event_carrito_bActionPerformed
-
     private void MEXICANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MEXICANAMouseClicked
-        Menu ventana_1 = new Menu();
-     ventana_1.setVisible(true);  
-     dispose();  
+        Pizza_txt.setText("");
+       Pizza_txt.setText("MEXICANA");
+       Precio_txt();
+       
     }//GEN-LAST:event_MEXICANAMouseClicked
 
     private void HAWAIANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HAWAIANAMouseClicked
-        // Pizza hawaina
+      Pizza_txt.setText("");
+       Pizza_txt.setText("HAWAIANA");
+       Precio_txt();
     }//GEN-LAST:event_HAWAIANAMouseClicked
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void agregar_pizzas_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_pizzas_bActionPerformed
+        // Obtengo texto de la caja de texto
+        
+        if (control == 0 && tamaño_pizza_b1.getSelectedItem() == "MEDIANA"){
+            Menu.total_suma(150, 1);
+        }else if (control == 0 && tamaño_pizza_b1.getSelectedItem() == "GRANDE"){
+           Menu.total_suma(210,2);
+        }else if (control !=0 && tamaño_pizza_b1.getSelectedItem() == "MEDIANA"){
+            control=0;
+            Menu.total_suma(200,3);
+        }else if (control !=0 && tamaño_pizza_b1.getSelectedItem() == "GRANDE"){
+            control=0;
+            Menu.total_suma(280,4);
+        }
+     String pizza =  Pizza_txt.getText();
+     pizza= "PIZZA "+pizza +" "+ tamaño_pizza_b1.getSelectedItem();
+        Menu.lista_p.addElement(pizza);
+
+    
+    }//GEN-LAST:event_agregar_pizzas_bActionPerformed
+
+    private void MEXICANAFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MEXICANAFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_MEXICANAFocusGained
+
+    private void MIXTAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MIXTAMouseClicked
+        // TODO add your handling code here:
+        Pizza_txt.setText("");
+        Pizza_txt.setText("MIXTA");
+        Precio_txt();
+    }//GEN-LAST:event_MIXTAMouseClicked
+
+    private void ATUNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ATUNMouseClicked
+        // TODO add your handling code here:
+        Pizza_txt.setText("");
+        Pizza_txt.setText("ATUN");
+        Precio_txt();
+    }//GEN-LAST:event_ATUNMouseClicked
+
+    private void ESPECIALMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ESPECIALMouseClicked
+        // TODO add your handling code here:
+        Pizza_txt.setText("");
+       Pizza_txt.setText("ESPECIAL");
+       Precio_txt();
+    }//GEN-LAST:event_ESPECIALMouseClicked
+
+    private void CAMARONESMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CAMARONESMouseClicked
+        // TODO add your handling code here:
+        control = 1;
+        control2=1;
+        
+        Pizza_txt.setText("");
+        Pizza_txt.setText("CAMARONES");
+        Precio_txt();
+    }//GEN-LAST:event_CAMARONESMouseClicked
+
+    private void VEGETARIANAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VEGETARIANAMouseClicked
+        // TODO add your handling code here:
+        Pizza_txt.setText("");
+        Pizza_txt.setText("VEGETARIANA");
+        Precio_txt();
+    }//GEN-LAST:event_VEGETARIANAMouseClicked
+
+    private void tamaño_pizza_b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tamaño_pizza_b1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_tamaño_pizza_b1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -553,12 +720,11 @@ public class pizzas extends javax.swing.JFrame {
     private javax.swing.JLabel HAWAIANA;
     private javax.swing.JLabel MEXICANA;
     private javax.swing.JLabel MIXTA;
+    private javax.swing.JLabel Pizza_txt;
+    private javax.swing.JLabel Precio;
     private javax.swing.JLabel VEGETARIANA;
-    private javax.swing.JButton armar_pizza_b;
-    private javax.swing.JButton carrito_b;
+    private javax.swing.JButton agregar_pizzas_b;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
@@ -568,6 +734,8 @@ public class pizzas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
@@ -583,8 +751,13 @@ public class pizzas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JButton pizzas_b;
+    private javax.swing.JComboBox<String> tamaño_pizza_b1;
     // End of variables declaration//GEN-END:variables
 }

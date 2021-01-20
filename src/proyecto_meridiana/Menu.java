@@ -5,6 +5,7 @@
  */
 package proyecto_meridiana;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 
 /**
@@ -13,11 +14,39 @@ import javax.swing.JFrame;
  */
 public class Menu extends javax.swing.JFrame {
 
+    //inicialiso variables de la lista
+    public static DefaultListModel lista_p = new DefaultListModel();
     /**
      * Creates new form Menu
      */
+    public static int suma = 0;
+  
+    public static void total_suma(int valor, int tipo){
+        
+      suma = suma + valor;
+      
+         String s = Integer.toString(suma);
+        
+     }
+    public void resta(){
+        String texto="MEDIANA";
+        texto.indexOf(texto);
+    }
+    
+    
     public Menu() {
         initComponents();
+        
+        pizzas ventana_2 = new pizzas();
+     ventana_2.setVisible(true);  
+    
+     
+        // inicialiso los componenetes de la lista 
+      lista_p = new DefaultListModel();
+      
+      lista_pedido.setModel(lista_p);
+      
+     
     }
 
     /**
@@ -29,17 +58,25 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        lista_pedido = new javax.swing.JList<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        pizzas_a = new javax.swing.JButton();
-        armar_pizza_a = new javax.swing.JButton();
         carrito_a = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        eleminar_seleccion_b = new javax.swing.JButton();
+        Eliminar_pedido_b = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        direccion_texto = new javax.swing.JTextArea();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        total_txt = new javax.swing.JLabel();
+        jToggleButton2 = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,80 +84,14 @@ public class Menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 570));
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
-
-        jLabel1.setText("Resumen del la orden");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(560, 300, 170, 28);
-
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_orden.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(370, 200, 65, 65);
-
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Mixta", "Hawaiana", "Mexicana", "Vegetariana", "Atún", "Camarones", "Especial", "Pizza 4 Ingredientes" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
+        jScrollPane2.setViewportView(lista_pedido);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(340, 310, 170, 150);
+        jScrollPane2.setBounds(300, 150, 200, 200);
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_1.png"))); // NOI18N
-
-        pizzas_a.setBackground(new java.awt.Color(255, 255, 255));
-        pizzas_a.setForeground(new java.awt.Color(255, 255, 255));
-        pizzas_a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_pizzas.png"))); // NOI18N
-        pizzas_a.setBorder(null);
-        pizzas_a.setBorderPainted(false);
-        pizzas_a.setContentAreaFilled(false);
-        pizzas_a.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pizzas_aActionPerformed(evt);
-            }
-        });
-
-        armar_pizza_a.setBackground(new java.awt.Color(255, 255, 255));
-        armar_pizza_a.setForeground(new java.awt.Color(255, 255, 255));
-        armar_pizza_a.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo_armar_pizza.png"))); // NOI18N
-        armar_pizza_a.setBorder(null);
-        armar_pizza_a.setBorderPainted(false);
-        armar_pizza_a.setContentAreaFilled(false);
-        armar_pizza_a.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                armar_pizza_aActionPerformed(evt);
-            }
-        });
 
         carrito_a.setBackground(new java.awt.Color(255, 255, 255));
         carrito_a.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,39 +112,156 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 423, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 590, Short.MAX_VALUE)
                 .addComponent(carrito_a, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(pizzas_a, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(armar_pizza_a, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(42, 42, 42))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(carrito_a)
-                    .addComponent(armar_pizza_a)
-                    .addComponent(pizzas_a)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(carrito_a)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 800, 80);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        eleminar_seleccion_b.setBackground(new java.awt.Color(255, 0, 0));
+        eleminar_seleccion_b.setForeground(new java.awt.Color(255, 255, 255));
+        eleminar_seleccion_b.setText("Eliminar Seleccion");
+        eleminar_seleccion_b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                eleminar_seleccion_bActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(500, 180, 90, 40);
+        getContentPane().add(eleminar_seleccion_b);
+        eleminar_seleccion_b.setBounds(250, 380, 140, 32);
+
+        Eliminar_pedido_b.setBackground(new java.awt.Color(255, 0, 0));
+        Eliminar_pedido_b.setForeground(new java.awt.Color(255, 255, 255));
+        Eliminar_pedido_b.setText("Eiminar Pedido");
+        Eliminar_pedido_b.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Eliminar_pedido_bActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Eliminar_pedido_b);
+        Eliminar_pedido_b.setBounds(400, 380, 140, 32);
+
+        jPanel3.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel3.setMaximumSize(new java.awt.Dimension(170, 28));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Resumen del la orden");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel3);
+        jPanel3.setBounds(320, 110, 170, 28);
+
+        direccion_texto.setColumns(20);
+        direccion_texto.setRows(5);
+        jScrollPane1.setViewportView(direccion_texto);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(540, 190, 223, 83);
+
+        jToggleButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jToggleButton1.setText("Agregar Direccion");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jToggleButton1);
+        jToggleButton1.setBounds(570, 300, 140, 32);
+
+        jPanel4.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel4.setMaximumSize(new java.awt.Dimension(170, 28));
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Direccion");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(560, 150, 170, 28);
+
+        jPanel5.setBackground(new java.awt.Color(255, 51, 51));
+
+        jPanel6.setBackground(new java.awt.Color(0, 102, 153));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Total");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+        );
+
+        total_txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(total_txt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(total_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel5);
+        jPanel5.setBounds(310, 430, 200, 70);
+
+        jToggleButton2.setBackground(new java.awt.Color(255, 0, 0));
+        jToggleButton2.setText("Calcular");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jToggleButton2);
+        jToggleButton2.setBounds(550, 450, 140, 32);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Primer_Fondo_Menu.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -183,32 +271,55 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pizzas_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pizzas_aActionPerformed
-     pizzas ventana_2 = new pizzas();
-     ventana_2.setVisible(true);  
-     dispose();  
-    }//GEN-LAST:event_pizzas_aActionPerformed
-
-    private void armar_pizza_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_armar_pizza_aActionPerformed
-     armar_pizza ventana_3 = new armar_pizza();
-     ventana_3.setVisible(true);  
-     dispose();  
-    }//GEN-LAST:event_armar_pizza_aActionPerformed
-
     private void carrito_aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrito_aActionPerformed
  
-     Menu ventana_1 = new Menu();
-     ventana_1.setVisible(true);  
-     dispose();  
     }//GEN-LAST:event_carrito_aActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void eleminar_seleccion_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eleminar_seleccion_bActionPerformed
+        // elimino seleccion de la lista
+        int eliminar = lista_pedido.getSelectedIndex();
+       
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        String texto=lista_pedido.getSelectedValue();
+          
+        if ( texto.indexOf("MEDIANA") != -1 && texto.indexOf("CAMARONES" ) != -1 ){
+            suma = suma - 200;
+        }else  if ( texto.indexOf("GRANDE") != -1 && texto.indexOf("CAMARONES" ) != -1 ){
+            suma = suma - 280;
+        }else  if ( texto.indexOf("MEDIANA") != -1 ){
+            suma = suma - 150;
+        }else  if ( texto.indexOf("GRANDE") != -1 ){
+            suma = suma - 210;
+        }
+        String s = Integer.toString(suma);
+        total_txt.setText("$ "+ s);
+         lista_p.remove(eliminar);
+    }//GEN-LAST:event_eleminar_seleccion_bActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // Obtengo el texto de la direccion 
+     
+      String direccion =  direccion_texto.getText();
+      
+      //Mando a la lista 
+      lista_p.addElement(direccion);
+      
+      direccion_texto.setText("");
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void Eliminar_pedido_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar_pedido_bActionPerformed
+        // elimino todo de la lista 
+         int eliminar_todo = lista_pedido.getSelectedIndex();
+        lista_p.removeAllElements();
+         suma = 0;
+        String s = Integer.toString(suma);
+        total_txt.setText("$" + s);
+    }//GEN-LAST:event_Eliminar_pedido_bActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+      String s = Integer.toString(suma);
+        total_txt.setText("$" + s);
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,17 +357,25 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton armar_pizza_a;
+    private javax.swing.JButton Eliminar_pedido_b;
     private javax.swing.JButton carrito_a;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextArea direccion_texto;
+    private javax.swing.JButton eleminar_seleccion_b;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JList<String> jList2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton pizzas_a;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    public javax.swing.JList<String> lista_pedido;
+    public javax.swing.JLabel total_txt;
     // End of variables declaration//GEN-END:variables
 }
